@@ -24,7 +24,7 @@ function App() {
           </Accordion> */}
           <br />
           {/* Button - 2. Override through ThemeProvider */}
-          <Button variant="contained">normal</Button>
+          <Button variant="contained">primary</Button>
           <Button variant="contained" color="secondary">
             secondary
           </Button>
@@ -34,13 +34,13 @@ function App() {
           </Button>
           <Button variant="text">text</Button>
           <Button variant="contained" disabled>
-            disabled contained (primary, secondary, danger)
+            disabled (primary, secondary, danger)
           </Button>
           <Button variant="outlined" disabled>
-            disabled outlined (tertiary)
+            disabled (tertiary)
           </Button>
           <Button variant="text" disabled>
-            disabled text (text)
+            disabled (text)
           </Button>
 
           <br />
