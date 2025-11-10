@@ -22,30 +22,22 @@ function App() {
               <p>No style override</p>
             </div>
           </Accordion> */}
-
           <br />
-
           {/* Button - 2. Override through ThemeProvider */}
           <Button variant="contained">normal</Button>
-
           <Button variant="contained" color="secondary">
             secondary
           </Button>
-
           <Button variant="outlined">tertiary</Button>
-
           <Button variant="contained" color="error">
             danger
           </Button>
-
           <Button variant="text">text</Button>
-
           <Button variant="contained" disabled>
             disabled
           </Button>
 
           <br />
-
           {/* Danger Button - 3. Manual style override (BAD) */}
           {/* <Button
             variant="outlined"
@@ -70,9 +62,7 @@ function App() {
           >
             danger (Manual using sx)
           </Button> */}
-
           <br />
-
           {/* Custom Buttons - 4a. Import styles from elsewhere in sx */}
           {/* <Button variant="outlined" color="primary" sx={ghostButtonStyle}>
             GHOST (Import styles)
@@ -81,9 +71,7 @@ function App() {
           <Button variant="outlined" color="primary" sx={dangerButtonStyle}>
             DANGER (Import styles)
           </Button> */}
-
           <br />
-
           {/* Custom Violet Button - 5a. Modify color to violet (pass in custom color - requires extending types) */}
           {/* <Button variant="outlined" color="violet">
             VIOLET Outlined (modify color)
@@ -91,9 +79,7 @@ function App() {
           <Button variant="contained" color="violet">
             VIOLET Contained (modify color)
           </Button> */}
-
           <br />
-
           {/* Chip - 5b. Modify color (pass in custom color - requires extending types) */}
           {/* <Chip label="Chip Color Primary" color="primary" variant="outlined" clickable />
           <Chip label="Chip Color Violet" color="violet" variant="outlined" clickable /> */}

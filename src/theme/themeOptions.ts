@@ -30,8 +30,6 @@ const themeOptions: ThemeOptions = {
     },
   },
   typography: {
-    // fontWeightBold: typography.fontWeight,
-    // fontSize: parseFontSize(typography.fontSize),
     fontFamily: typography.fontFamily,
   },
   components: {
@@ -40,15 +38,7 @@ const themeOptions: ThemeOptions = {
         root: {
           fontWeight: '400',
           fontSize: 14,
-          // color: cc.sem.colour.text.inverse,
-          // backgroundColor: cc.sem.colour.action.primary, // not needed at root level
           textTransform: 'capitalize',
-          '&:hover': {
-            // backgroundColor: cc.sem.colour.action['primary-hovered'], // not needed at root level
-          },
-          '&:active': {
-            // backgroundColor: cc.sem.colour.action['primary-pressed'], // not needed at root level
-          },
           '&.Mui-disabled': {
             color: alpha(cc.sem.colour.text.disabled, 0.38),
             backgroundColor: alpha(cc.sem.colour.action.disabled, 0.12),
@@ -60,19 +50,6 @@ const themeOptions: ThemeOptions = {
           '&:hover': {
             backgroundColor: alpha(cc.sem.colour.text.tertiary, 0.08),
           },
-          // contained: {
-          //   backgroundColor: cc.sem.colour.action.primary,
-          //   color: cc.sem.colour.text.inverse,
-          //   boxShadow: 'none',
-          //   '&:hover': {
-          //     backgroundColor: cc.sem.colour.action['primary-hovered'],
-          //     boxShadow: 'none',
-          //   },
-          //   '&:active': {
-          //     backgroundColor: cc.sem.colour.action['primary-pressed'],
-          //     boxShadow: 'none',
-          //   },
-
           //   // Custom styles applied on top of existing contained styles above
           //   ...violetButtonOverrides.contained,
           // },
@@ -82,20 +59,8 @@ const themeOptions: ThemeOptions = {
           // },
         },
       },
-      // MuiTouchRipple: {
-      //   styleOverrides: {
-      //     root: {
-      //       color: palette.green['40'],
-      //       opacity: 0.9,
-      //     },
-      //     child: {
-      //       backgroundColor: palette.green['40'],
-      //     },
-      //   },
-      // },
     },
   },
 };
-// };
 
 export default themeOptions;
