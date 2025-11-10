@@ -34,7 +34,13 @@ function App() {
           </Button>
           <Button variant="text">text</Button>
           <Button variant="contained" disabled>
-            disabled
+            disabled contained (primary, secondary, danger)
+          </Button>
+          <Button variant="outlined" disabled>
+            disabled outlined (tertiary)
+          </Button>
+          <Button variant="text" disabled>
+            disabled text (text)
           </Button>
 
           <br />

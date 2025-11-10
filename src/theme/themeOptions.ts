@@ -13,6 +13,9 @@ const themeOptions: ThemeOptions = {
     secondary: {
       main: cc.ref.palette.grey['400'],
     },
+    // tertiary: {
+    //   main: cc.ref.palette.grey['00'],
+    // }, // MUI does not support tertiary natively, can potentially extend palette later in mui-component-override.d.ts. Allows tertiary color usage in Button component.
     success: {
       main: cc.ref.palette.green['400'],
     },
@@ -39,25 +42,38 @@ const themeOptions: ThemeOptions = {
           fontWeight: '400',
           fontSize: 14,
           textTransform: 'capitalize',
+        },
+        contained: {
           '&.Mui-disabled': {
             color: alpha(cc.sem.colour.text.disabled, 0.38),
             backgroundColor: alpha(cc.sem.colour.action.disabled, 0.12),
           },
         },
         outlined: {
-          color: cc.sem.colour.text.tertiary, // to discuss whether this is appropriate since we cannot have cc.sem.colour.text
-          border: `1px solid ${cc.sem.colour.action.tertiary}`,
+          '&.Mui-active': {
+            color: cc.sem.colour.text.tertiary, // to discuss whether this is appropriate since we cannot have cc.sem.colour.text
+            border: `1px solid ${cc.sem.colour.action.tertiary}`,
+          },
           '&:hover': {
             backgroundColor: alpha(cc.sem.colour.text.tertiary, 0.08),
           },
-          //   // Custom styles applied on top of existing contained styles above
-          //   ...violetButtonOverrides.contained,
-          // },
-          // // example of importing style overrides from design tokens package
-          // outlined: {
-          //   ...violetButtonOverrides.outlined,
-          // },
+          '&.Mui-disabled': {
+            color: alpha(cc.sem.colour.text.tertiary, 0.38),
+            borderColor: alpha(cc.sem.colour.action.tertiary, 0.12),
+          },
         },
+        text: {
+          '&.Mui-disabled': {
+            color: alpha(cc.sem.colour.text.disabled, 0.38),
+          },
+        },
+        //   // Custom styles applied on top of existing contained styles above
+        //   ...violetButtonOverrides.contained,
+        // },
+        // // example of importing style overrides from design tokens package
+        // outlined: {
+        //   ...violetButtonOverrides.outlined,
+        // },
       },
     },
   },
