@@ -1,11 +1,11 @@
 import './App.css';
 import themeOptions from './theme/themeOptions';
-import { ghostButtonStyle, dangerButtonStyle } from 'design-tokens/customThemes';
+// import { ghostButtonStyle, dangerButtonStyle } from 'design-tokens/customThemes';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import Accordion from '@mui/material/Accordion';
-import Chip from '@mui/material/Chip';
+// import Accordion from '@mui/material/Accordion';
+// import Chip from '@mui/material/Chip';
 
 function App() {
   const theme = createTheme(themeOptions);
@@ -16,28 +16,36 @@ function App() {
         <h2>Design Tokens Prototype</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {/* Normal Accordion - 1. No style override */}
-          <Accordion>
+          {/* <Accordion>
             <div style={{ padding: 16 }}>
               <strong>Accordion Content</strong>
               <p>No style override</p>
             </div>
-          </Accordion>
-
+          </Accordion> */}
           <br />
-
           {/* Button - 2. Override through ThemeProvider */}
-          <Button variant="contained" onClick={() => {}}>
-            normal
+          <Button variant="contained">primary</Button>
+          <Button variant="contained" color="secondary">
+            secondary
           </Button>
-
-          <Button variant="contained" onClick={() => {}} disabled>
-            disabled
+          <Button variant="outlined">tertiary</Button>
+          <Button variant="contained" color="error">
+            danger
+          </Button>
+          <Button variant="text">text</Button>
+          <Button variant="contained" disabled>
+            disabled (primary, secondary, danger)
+          </Button>
+          <Button variant="outlined" disabled>
+            disabled (tertiary)
+          </Button>
+          <Button variant="text" disabled>
+            disabled (text)
           </Button>
 
           <br />
-
           {/* Danger Button - 3. Manual style override (BAD) */}
-          <Button
+          {/* <Button
             variant="outlined"
             color="error"
             sx={{
@@ -59,34 +67,28 @@ function App() {
             }}
           >
             danger (Manual using sx)
-          </Button>
-
+          </Button> */}
           <br />
-
           {/* Custom Buttons - 4a. Import styles from elsewhere in sx */}
-          <Button variant="outlined" color="primary" sx={ghostButtonStyle}>
+          {/* <Button variant="outlined" color="primary" sx={ghostButtonStyle}>
             GHOST (Import styles)
           </Button>
 
           <Button variant="outlined" color="primary" sx={dangerButtonStyle}>
             DANGER (Import styles)
-          </Button>
-
+          </Button> */}
           <br />
-
           {/* Custom Violet Button - 5a. Modify color to violet (pass in custom color - requires extending types) */}
-          <Button variant="outlined" color="violet">
+          {/* <Button variant="outlined" color="violet">
             VIOLET Outlined (modify color)
           </Button>
           <Button variant="contained" color="violet">
             VIOLET Contained (modify color)
-          </Button>
-
+          </Button> */}
           <br />
-
           {/* Chip - 5b. Modify color (pass in custom color - requires extending types) */}
-          <Chip label="Chip Color Primary" color="primary" variant="outlined" clickable />
-          <Chip label="Chip Color Violet" color="violet" variant="outlined" clickable />
+          {/* <Chip label="Chip Color Primary" color="primary" variant="outlined" clickable />
+          <Chip label="Chip Color Violet" color="violet" variant="outlined" clickable /> */}
         </div>
       </>
     </ThemeProvider>
