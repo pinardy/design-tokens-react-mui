@@ -1,7 +1,6 @@
-import { parseFontSize } from '../utils/utils';
 import { tokens } from 'design-tokens/tokens';
-import { alpha, type ThemeOptions } from '@mui/material/styles';
-// import { violetButtonOverrides } from 'design-tokens/styleOverrides';
+import { type ThemeOptions } from '@mui/material/styles';
+import { buttonStyleOverrides } from 'design-tokens/styleOverrides';
 
 const { typography, cc } = tokens;
 
@@ -36,46 +35,7 @@ const themeOptions: ThemeOptions = {
     fontFamily: typography.fontFamily,
   },
   components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          fontWeight: '400',
-          fontSize: 14,
-          textTransform: 'capitalize',
-        },
-        contained: {
-          '&.Mui-disabled': {
-            color: alpha(cc.sem.colour.text.disabled, 0.38),
-            backgroundColor: alpha(cc.sem.colour.action.disabled, 0.12),
-          },
-        },
-        outlined: {
-          '&.Mui-active': {
-            color: cc.sem.colour.text.tertiary, // to discuss whether this is appropriate since we cannot have cc.sem.colour.text
-            border: `1px solid ${cc.sem.colour.action.tertiary}`,
-          },
-          '&:hover': {
-            backgroundColor: alpha(cc.sem.colour.text.tertiary, 0.08),
-          },
-          '&.Mui-disabled': {
-            color: alpha(cc.sem.colour.text.tertiary, 0.38),
-            borderColor: alpha(cc.sem.colour.action.tertiary, 0.12),
-          },
-        },
-        text: {
-          '&.Mui-disabled': {
-            color: alpha(cc.sem.colour.text.disabled, 0.38),
-          },
-        },
-        //   // Custom styles applied on top of existing contained styles above
-        //   ...violetButtonOverrides.contained,
-        // },
-        // // example of importing style overrides from design tokens package
-        // outlined: {
-        //   ...violetButtonOverrides.outlined,
-        // },
-      },
-    },
+    MuiButton: buttonStyleOverrides,
   },
 };
 
