@@ -1,9 +1,12 @@
 import './App.css';
 import themeOptions from './theme/themeOptions';
+import { tokens } from 'design-tokens/tokens';
 // import { ghostButtonStyle, dangerButtonStyle } from 'design-tokens/customThemes';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+
+const { cc } = tokens;
 // import Accordion from '@mui/material/Accordion';
 // import Chip from '@mui/material/Chip';
 
@@ -24,7 +27,10 @@ function App() {
           </Accordion> */}
           <br />
           {/* Button - 2. Override through ThemeProvider */}
-          <Button variant="contained">primary</Button>
+          <Button sx={{ backgroundColor: cc.ref.palette.green['600'] }}>test</Button>
+          <Button variant="contained" color="primary">
+            primary
+          </Button>
           <Button variant="contained" color="secondary">
             secondary
           </Button>
